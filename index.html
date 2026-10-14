@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dock — One link for every customer deal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --cream: #faf9f7;
@@ -41,25 +41,28 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; }
 body {
-  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Noto Sans KR', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   font-feature-settings: "kern" on;
   background: var(--cream);
   color: var(--ink);
   font-size: 16px; line-height: 1.68;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; border: 0; background: none; cursor: pointer; color: inherit; }
 img, svg { display: block; }
 
 /* ---------- Type ---------- */
-.t-display-lg { font-size: 84px; line-height: 1.10; font-weight: 600; letter-spacing: -2.5px; }
-.t-display    { font-size: 57px; line-height: 1.12; font-weight: 600; letter-spacing: -1.5px; }
-.t-h-xl       { font-size: 48px; line-height: 1.24; font-weight: 600; letter-spacing: -1px; }
-.t-h-lg       { font-size: 40px; line-height: 1.30; font-weight: 600; letter-spacing: -.8px; }
-.t-h          { font-size: 24px; line-height: 1.40; font-weight: 600; letter-spacing: -.3px; }
-.t-h-sm       { font-size: 20px; line-height: 1.45; font-weight: 600; letter-spacing: -.2px; }
+.t-display-lg { font-size: 84px; line-height: 1.10; font-weight: 700; letter-spacing: -2.5px; }
+.t-en { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-weight: 600; font-feature-settings: "kern" on; }
+.t-display    { font-size: 57px; line-height: 1.12; font-weight: 700; letter-spacing: -1.5px; }
+.t-h-xl       { font-size: 48px; line-height: 1.24; font-weight: 700; letter-spacing: -1px; }
+.t-h-lg       { font-size: 40px; line-height: 1.30; font-weight: 700; letter-spacing: -.8px; }
+.t-h          { font-size: 24px; line-height: 1.40; font-weight: 700; letter-spacing: -.3px; }
+.t-h-sm       { font-size: 20px; line-height: 1.45; font-weight: 700; letter-spacing: -.2px; }
 .t-sub        { font-size: 18px; line-height: 1.62; font-weight: 400; }
 .t-body       { font-size: 16px; line-height: 1.68; font-weight: 400; }
 .t-body-m     { font-size: 16px; line-height: 1.68; font-weight: 500; }
@@ -67,7 +70,7 @@ img, svg { display: block; }
 .t-label      { font-size: 14px; line-height: 1.62; font-weight: 500; }
 .t-label-r    { font-size: 14px; line-height: 1.62; font-weight: 400; }
 .t-caption    { font-size: 13px; line-height: 1.6;  font-weight: 400; }
-.t-overline   { font-size: 13px; line-height: 1.5;  font-weight: 600; letter-spacing: .077em; text-transform: uppercase; color: var(--navy); }
+.t-overline   { font-size: 13px; line-height: 1.5;  font-weight: 700; letter-spacing: .077em; text-transform: uppercase; color: var(--navy); }
 .c-slate { color: var(--slate); } .c-steel { color: var(--steel); } .c-navy { color: var(--navy); } .c-violet { color: var(--violet); }
 
 /* ---------- Layout ---------- */
@@ -123,25 +126,28 @@ img, svg { display: block; }
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: 144px 0 180px;
+  padding: 200px 0 253px;
   background: linear-gradient(180deg, var(--cream) 0%, var(--cream) 42%, #d8dfee 78%, var(--sky-mist) 100%);
   overflow: hidden;
 }
-.hero .container { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; }
-.hero .t-sub { max-width: 640px; }
+/* spacing matches the hand-placed hero in Figma: 93 / 20 / 24 / 77 */
+.hero .container { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.hero .t-sub { max-width: 640px; margin-top: 93px; }
+.hero .ctas { margin-top: 20px; }
+.hero .proof { margin-top: 24px; }
 .ctas { display: flex; gap: 12px; }
 .proof { display: flex; align-items: center; gap: 12px; text-align: left; }
 .proof .stars { color: var(--navy); letter-spacing: 1px; }
 .avatars .avatar.s32 { width: 32px; height: 32px; }
 
-.shot-wrap { position: relative; margin-top: 32px; width: 1200px; max-width: 100%; }
+.shot-wrap { position: relative; margin-top: 77px; width: 1200px; max-width: 100%; }
 .shot { display: flex; width: 100%; height: 620px; background: var(--white); border: 1px solid var(--hair); border-radius: var(--r-card); box-shadow: var(--shadow-lg); overflow: hidden; text-align: left; }
 .side { width: 232px; flex-shrink: 0; background: var(--ivory); border-right: 1px solid var(--hair); padding: 20px 20px 0; display: flex; flex-direction: column; gap: 8px; }
 .side-item { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--slate); }
 .side-item.active { background: var(--white); color: var(--ink); box-shadow: var(--shadow-subtle); }
 .side-item i { width: 14px; height: 14px; border-radius: 4px; background: var(--faint); }
 .side-item.active i { background: var(--navy); }
-.side-label { font-size: 13px; font-weight: 600; letter-spacing: .06em; color: var(--steel); margin-top: 16px; }
+.side-label { font-size: 13px; font-weight: 700; letter-spacing: .06em; color: var(--steel); margin-top: 16px; }
 .shared { display: flex; align-items: center; gap: 10px; padding: 6px 12px; }
 .shared .img { border-radius: 6px; }
 .main { flex: 1; min-width: 0; padding: 28px 32px; display: flex; flex-direction: column; gap: 20px; }
@@ -161,8 +167,8 @@ img, svg { display: block; }
 .tr > :nth-child(4) { width: 104px; text-align: right; font-weight: 500; }
 .tr.head { background: var(--ivory); padding-top: 12px; padding-bottom: 12px; font-size: 14px; font-weight: 500; color: var(--slate); }
 .tr.head > :nth-child(4) { font-weight: 500; }
-.tr.total { margin-top: auto; background: var(--ivory); border-top: 1px solid var(--hair); border-bottom: 0; font-weight: 600; }
-.tr.total > :nth-child(4) { font-weight: 600; }
+.tr.total { margin-top: auto; background: var(--ivory); border-top: 1px solid var(--hair); border-bottom: 0; font-weight: 700; }
+.tr.total > :nth-child(4) { font-weight: 700; }
 .plan { width: 340px; flex-shrink: 0; background: var(--ivory); border: 1px solid var(--hair); border-radius: var(--r-card); padding: 20px; display: flex; flex-direction: column; gap: 6px; }
 .plan-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
 .next { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 14px; background: var(--white); border: 1px solid var(--hair); border-radius: 8px; font-size: 14px; font-weight: 500; }
@@ -247,7 +253,7 @@ img, svg { display: block; }
 .testimonial { display: flex; background: var(--ivory); border: 1px solid var(--hair); border-radius: var(--r-card); overflow: hidden; }
 .testimonial > .img { width: 420px; min-height: 460px; border-radius: 0; }
 .quote { flex: 1; padding: 48px 56px; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; }
-.quote blockquote { font-size: 28px; line-height: 1.42; font-weight: 600; letter-spacing: -.3px; }
+.quote blockquote { font-size: 28px; line-height: 1.42; font-weight: 700; letter-spacing: -.3px; }
 .clogo-lg { display: flex; align-items: center; gap: 8px; }
 .clogo-lg i { width: 28px; height: 28px; border-radius: 8px; background: var(--faint); }
 .clogo-lg b { width: 96px; height: 12px; border-radius: 6px; background: var(--faint); }
@@ -269,7 +275,7 @@ img, svg { display: block; }
 .article { padding: 12px 12px 24px; display: flex; flex-direction: column; gap: 16px; }
 .article .img { height: 216px; }
 .article .body { padding: 4px 12px 0; display: flex; flex-direction: column; gap: 12px; }
-.article .cat { font-size: 13px; font-weight: 600; color: var(--violet); }
+.article .cat { font-size: 13px; font-weight: 700; color: var(--violet); }
 .article .by { display: flex; align-items: center; gap: 8px; padding-top: 6px; }
 .article .by .avatar { width: 24px; height: 24px; }
 
@@ -294,7 +300,7 @@ img, svg { display: block; }
 .input:focus { border-color: var(--navy-tint); }
 .links { display: flex; justify-content: space-between; gap: 32px; }
 .lcol { display: flex; flex-direction: column; gap: 12px; }
-.lcol h4 { font-size: 14px; font-weight: 600; line-height: 1.62; }
+.lcol h4 { font-size: 14px; font-weight: 700; line-height: 1.62; }
 .lcol a { font-size: 14px; line-height: 1.62; color: var(--slate); }
 .lcol a:hover { color: var(--ink); }
 .legal { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid var(--hair); color: var(--steel); font-size: 13px; }
@@ -318,6 +324,8 @@ img, svg { display: block; }
   .t-h-xl { font-size: 34px; letter-spacing: -.6px; }
   .t-h-lg { font-size: 30px; }
   .hero { padding: 88px 0 120px; }
+  .hero .t-sub { margin-top: 28px; }
+  .shot-wrap { margin-top: 40px; }
   .shot { height: auto; }
   .side, .plan, .panel { display: none; }
   .content { flex-direction: column; }
@@ -366,15 +374,15 @@ img, svg { display: block; }
   <div class="container">
     <a href="#" class="logo"><svg width="28" height="28"><use href="#i-logo"/></svg><span class="t-h-sm">Dock</span></a>
     <nav class="nav-links t-nav">
-      <a class="nav-item" href="#">Product <svg width="12" height="12"><use href="#i-chev"/></svg></a>
-      <a class="nav-item" href="#">Pricing</a>
-      <a class="nav-item" href="#">Customers</a>
-      <a class="nav-item" href="#">Resources <svg width="12" height="12"><use href="#i-chev"/></svg></a>
+      <a class="nav-item" href="#">제품 <svg width="12" height="12"><use href="#i-chev"/></svg></a>
+      <a class="nav-item" href="#">요금제</a>
+      <a class="nav-item" href="#">고객 사례</a>
+      <a class="nav-item" href="#">리소스 <svg width="12" height="12"><use href="#i-chev"/></svg></a>
     </nav>
     <div class="auth t-nav">
-      <a class="login" href="#">Log in</a>
-      <a class="btn btn-ghost" href="#">Request demo</a>
-      <a class="btn btn-primary" href="#">Start for free</a>
+      <a class="login" href="#">로그인</a>
+      <a class="btn btn-ghost" href="#">데모 신청</a>
+      <a class="btn btn-primary" href="#">무료로 시작하기</a>
     </div>
   </div>
 </header>
@@ -383,13 +391,12 @@ img, svg { display: block; }
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <span class="badge badge-violet">New · AI Documents for every deal</span>
-    <h1 class="t-display-lg">One link for<br>every customer deal</h1>
-    <p class="t-sub">Deal rooms, enablement and onboarding in a single workspace your buyers actually open. Share content, align on next steps and close faster.</p>
-    <div class="ctas"><a class="btn btn-ghost" href="#">Request demo</a><a class="btn btn-primary" href="#">Start for free</a></div>
+    <h1 class="t-display-lg t-en">One link for<br>every customer deal</h1>
+    <p class="t-sub">딜룸, 영업 교육, 온보딩을 한 곳에서. 고객이 실제로 열어보는 워크스페이스에서 자료를 공유하고, 다음 단계를 맞추고, 더 빠르게 계약하세요.</p>
+    <div class="ctas"><a class="btn btn-ghost" href="#">데모 신청</a><a class="btn btn-primary" href="#">무료로 시작하기</a></div>
     <div class="proof">
       <div class="avatars"><i class="avatar s32"></i><i class="avatar s32"></i><i class="avatar s32"></i><i class="avatar s32"></i><i class="avatar s32"></i></div>
-      <div><div class="t-label"><span class="stars">★★★★★</span>&nbsp; 4.8 on G2</div><div class="t-caption c-slate">Loved by 1,000+ revenue teams</div></div>
+      <div><div class="t-label"><span class="stars">★★★★★</span>&nbsp; G2 평점 4.8</div><div class="t-caption c-slate">1,000곳 이상의 영업팀이 사용 중</div></div>
     </div>
 
     <div class="shot-wrap">
@@ -397,12 +404,12 @@ img, svg { display: block; }
         <aside class="side">
           <div class="row" style="gap:8px"><span class="bar" style="width:20px;height:20px;border-radius:6px;background:var(--navy)"></span><span class="bar faint" style="width:96px;height:10px"></span></div>
           <div style="height:12px"></div>
-          <div class="side-item active"><i></i>Deal Rooms</div>
-          <div class="side-item"><i></i>Templates</div>
-          <div class="side-item"><i></i>Content</div>
-          <div class="side-item"><i></i>Analytics</div>
-          <div class="side-item"><i></i>Settings</div>
-          <div class="side-label">RECENTLY SHARED</div>
+          <div class="side-item active"><i></i>딜룸</div>
+          <div class="side-item"><i></i>템플릿</div>
+          <div class="side-item"><i></i>콘텐츠</div>
+          <div class="side-item"><i></i>분석</div>
+          <div class="side-item"><i></i>설정</div>
+          <div class="side-label">최근 공유</div>
           <div class="shared"><span class="img img-navy bare" style="width:44px;height:32px"></span><div class="meta"><span class="bar faint" style="width:110px;height:7px"></span><span class="bar" style="width:70px;height:7px"></span></div></div>
           <div class="shared"><span class="img img-sky bare" style="width:44px;height:32px"></span><div class="meta"><span class="bar faint" style="width:90px;height:7px"></span><span class="bar" style="width:60px;height:7px"></span></div></div>
           <div class="shared"><span class="img img-warm bare" style="width:44px;height:32px"></span><div class="meta"><span class="bar faint" style="width:120px;height:7px"></span><span class="bar" style="width:50px;height:7px"></span></div></div>
@@ -410,41 +417,41 @@ img, svg { display: block; }
         <div class="main">
           <div class="room-head">
             <span class="bar" style="width:36px;height:36px;border-radius:10px;background:var(--navy-tint)"></span>
-            <div class="title"><div class="t-h-sm">Northwind × Acme — Deal Room</div><div class="t-caption c-slate">Shared with 6 stakeholders · Updated 2h ago</div></div>
+            <div class="title"><div class="t-h-sm">Northwind × Acme 딜룸</div><div class="t-caption c-slate">이해관계자 6명과 공유 · 2시간 전 업데이트</div></div>
             <div class="avatars sm"><i class="avatar" style="width:28px;height:28px"></i><i class="avatar" style="width:28px;height:28px"></i><i class="avatar" style="width:28px;height:28px"></i><i class="avatar" style="width:28px;height:28px"></i><span class="more">+2</span></div>
-            <span class="badge badge-blue">Stage: Proposal</span>
-            <span class="share-btn">Share link</span>
+            <span class="badge badge-blue">단계: 제안</span>
+            <span class="share-btn">링크 공유</span>
           </div>
-          <div class="file-tabs"><span class="file-tab">Overview</span><span class="file-tab active">Pricing</span><span class="file-tab">Mutual plan</span><span class="file-tab">Files</span></div>
+          <div class="file-tabs"><span class="file-tab">개요</span><span class="file-tab active">견적</span><span class="file-tab">공동 실행 계획</span><span class="file-tab">파일</span></div>
           <div class="content">
             <div class="table">
-              <div class="tr head"><span>Product</span><span>Qty</span><span>Price</span><span>Total</span></div>
-              <div class="tr"><span>Platform — Business plan</span><span>1</span><span>$24,000</span><span>$24,000</span></div>
-              <div class="tr"><span>Additional seats</span><span>40</span><span>$180</span><span>$7,200</span></div>
-              <div class="tr"><span>Onboarding &amp; implementation</span><span>1</span><span>$4,500</span><span>$4,500</span></div>
-              <div class="tr"><span>Annual discount (−10%)</span><span></span><span></span><span>−$3,570</span></div>
-              <div class="tr total"><span>Total annual contract</span><span></span><span></span><span>$32,130</span></div>
+              <div class="tr head"><span>항목</span><span>수량</span><span>단가</span><span>합계</span></div>
+              <div class="tr"><span>플랫폼 — 비즈니스 플랜</span><span>1</span><span>$24,000</span><span>$24,000</span></div>
+              <div class="tr"><span>추가 사용자</span><span>40</span><span>$180</span><span>$7,200</span></div>
+              <div class="tr"><span>온보딩 및 도입 지원</span><span>1</span><span>$4,500</span><span>$4,500</span></div>
+              <div class="tr"><span>연간 결제 할인 (−10%)</span><span></span><span></span><span>−$3,570</span></div>
+              <div class="tr total"><span>연간 계약 총액</span><span></span><span></span><span>$32,130</span></div>
             </div>
             <div class="plan">
-              <div class="plan-head"><span class="t-body-m">Success criteria</span><span class="t-caption c-slate">3 / 5</span></div>
-              <div class="check"><svg width="18" height="18"><use href="#i-done"/></svg>Kickoff call with champion</div>
-              <div class="check"><svg width="18" height="18"><use href="#i-done"/></svg>Security review approved</div>
-              <div class="check"><svg width="18" height="18"><use href="#i-done"/></svg>Legal redlines returned</div>
-              <div class="check"><svg width="18" height="18"><use href="#i-todo"/></svg>Pricing sign-off from CFO</div>
-              <div class="check"><svg width="18" height="18"><use href="#i-todo"/></svg>Countersign order form</div>
-              <div class="next"><span>Next: CFO review · Thu</span><span class="badge badge-green">Schedule call</span></div>
+              <div class="plan-head"><span class="t-body-m">성공 기준</span><span class="t-caption c-slate">3 / 5</span></div>
+              <div class="check"><svg width="18" height="18"><use href="#i-done"/></svg>내부 추진자와 킥오프 미팅</div>
+              <div class="check"><svg width="18" height="18"><use href="#i-done"/></svg>보안 검토 승인</div>
+              <div class="check"><svg width="18" height="18"><use href="#i-done"/></svg>법무 수정안 회신</div>
+              <div class="check"><svg width="18" height="18"><use href="#i-todo"/></svg>CFO 가격 승인</div>
+              <div class="check"><svg width="18" height="18"><use href="#i-todo"/></svg>주문서 최종 서명</div>
+              <div class="next"><span>다음 단계: CFO 검토 · 목</span><span class="badge badge-green">미팅 예약</span></div>
             </div>
           </div>
         </div>
       </div>
 
       <div class="float float-activity">
-        <div class="row" style="gap:10px"><i class="avatar" style="width:36px;height:36px"></i><div><div class="t-label">Sarah viewed Pricing</div><div class="t-caption c-slate">Northwind · 3× today · 2 min ago</div></div></div>
+        <div class="row" style="gap:10px"><i class="avatar" style="width:36px;height:36px"></i><div><div class="t-label">서연 님이 견적을 확인했어요</div><div class="t-caption c-slate">Northwind · 오늘 3회 · 2분 전</div></div></div>
         <div class="bars"><span style="height:10px"></span><span style="height:16px"></span><span style="height:12px"></span><span style="height:22px"></span><span style="height:18px"></span><span style="height:28px"></span><span class="hi" style="height:34px"></span><span style="height:26px"></span><span class="hi" style="height:40px"></span></div>
       </div>
       <div class="float float-video">
-        <div class="video"><div class="img img-navy" style="width:248px;height:140px;border-radius:10px"><svg width="28" height="28"><use href="#i-img"/></svg>Video thumbnail</div><svg class="play" width="44" height="44" style="left:102px;top:30px"><use href="#i-play"/></svg></div>
-        <div class="cap"><span class="t-label">Call recap from Alex</span><span class="t-caption c-slate">2:14</span></div>
+        <div class="video"><div class="img img-navy" style="width:248px;height:140px;border-radius:10px"><svg width="28" height="28"><use href="#i-img"/></svg>영상 썸네일</div><svg class="play" width="44" height="44" style="left:102px;top:30px"><use href="#i-play"/></svg></div>
+        <div class="cap"><span class="t-label">민준 님의 미팅 요약</span><span class="t-caption c-slate">2:14</span></div>
       </div>
     </div>
   </div>
@@ -453,7 +460,7 @@ img, svg { display: block; }
 <!-- LOGO STRIP -->
 <section class="logos">
   <div class="container">
-    <p class="t-label c-slate">Trusted by 1,000+ revenue teams</p>
+    <p class="t-label c-slate">1,000곳 이상의 영업팀이 신뢰합니다</p>
     <div class="logo-row">
       <span class="clogo"><i></i><b style="width:80px"></b></span>
       <span class="clogo"><i></i><b style="width:103px"></b></span>
@@ -469,27 +476,27 @@ img, svg { display: block; }
 <section class="section product">
   <div class="container">
     <div class="sec-head">
-      <span class="t-overline">Product</span>
-      <h2 class="t-h-xl">Everything your buyers need,<br>in one place</h2>
-      <p class="t-sub">Swap between deal rooms, enablement and onboarding without losing context.</p>
+      <span class="t-overline">제품</span>
+      <h2 class="t-h-xl">고객에게 필요한 모든 것,<br>한 곳에서</h2>
+      <p class="t-sub">딜룸, 영업 교육, 온보딩을 맥락이 끊기지 않게 오가세요.</p>
     </div>
-    <div class="tabbar"><button class="tab active">Deal Rooms</button><button class="tab">Enablement Agent</button><button class="tab">AI Documents</button><button class="tab">Onboarding</button><button class="tab">Analytics</button></div>
+    <div class="tabbar"><button class="tab active">딜룸</button><button class="tab">영업 교육 에이전트</button><button class="tab">AI 문서</button><button class="tab">온보딩</button><button class="tab">분석</button></div>
     <div class="stage">
       <div class="ui">
         <div class="chat">
-          <div class="msg t-body">How do we handle SOC 2 questions from Northwind?</div>
+          <div class="msg t-body">Northwind의 SOC 2 관련 질문엔 어떻게 답하면 되나요?</div>
           <div class="answer">
-            <div class="agent"><i></i><span class="t-label c-violet">Enablement Agent</span></div>
+            <div class="agent"><i></i><span class="t-label c-violet">영업 교육 에이전트</span></div>
             <span class="bar" style="width:min(520px,100%);height:10px;border-radius:5px"></span>
             <span class="bar" style="width:min(560px,100%);height:10px;border-radius:5px"></span>
             <span class="bar" style="width:min(480px,100%);height:10px;border-radius:5px"></span>
             <span class="bar" style="width:300px;height:10px;border-radius:5px"></span>
-            <div class="video"><div class="img img-navy" style="width:100%;height:150px;border-radius:12px"><svg width="28" height="28"><use href="#i-img"/></svg>Product demo video</div><svg class="play" width="44" height="44" style="left:20px;bottom:20px"><use href="#i-play"/></svg></div>
+            <div class="video"><div class="img img-navy" style="width:100%;height:150px;border-radius:12px"><svg width="28" height="28"><use href="#i-img"/></svg>제품 데모 영상</div><svg class="play" width="44" height="44" style="left:20px;bottom:20px"><use href="#i-play"/></svg></div>
           </div>
-          <div class="chips"><span class="chip">Security one-pager.pdf</span><span class="chip">SOC 2 report</span><span class="chip">Trust center</span></div>
+          <div class="chips"><span class="chip">보안 소개서.pdf</span><span class="chip">SOC 2 보고서</span><span class="chip">트러스트 센터</span></div>
         </div>
         <div class="panel">
-          <div class="t-body-m">Recommended content</div>
+          <div class="t-body-m">추천 콘텐츠</div>
           <div class="c-row"><span class="img img-warm bare" style="width:56px;height:40px"></span><div class="meta"><span class="bar faint" style="width:140px;height:8px"></span><span class="bar" style="width:90px;height:8px"></span></div></div>
           <div class="c-row"><span class="img img-sky bare" style="width:56px;height:40px"></span><div class="meta"><span class="bar faint" style="width:140px;height:8px"></span><span class="bar" style="width:90px;height:8px"></span></div></div>
           <div class="c-row"><span class="img img-navy bare" style="width:56px;height:40px"></span><div class="meta"><span class="bar faint" style="width:140px;height:8px"></span><span class="bar" style="width:90px;height:8px"></span></div></div>
@@ -498,9 +505,9 @@ img, svg { display: block; }
       </div>
     </div>
     <div class="highlights">
-      <div class="hl"><i style="background:var(--violet)"></i><span class="t-body-m">Branded in seconds</span><span class="t-label-r c-slate">Pull logos and colors from any buyer domain automatically.</span></div>
-      <div class="hl"><i style="background:var(--navy)"></i><span class="t-body-m">Every asset, one link</span><span class="t-label-r c-slate">Decks, videos, pricing and docs, always the latest version.</span></div>
-      <div class="hl"><i style="background:var(--forest)"></i><span class="t-body-m">Know who is engaged</span><span class="t-label-r c-slate">Real-time alerts when stakeholders open or share the room.</span></div>
+      <div class="hl"><i style="background:var(--violet)"></i><span class="t-body-m">몇 초 만에 브랜딩</span><span class="t-label-r c-slate">고객사 도메인만 넣으면 로고와 컬러를 자동으로 가져와요.</span></div>
+      <div class="hl"><i style="background:var(--navy)"></i><span class="t-body-m">모든 자료를 링크 하나로</span><span class="t-label-r c-slate">소개서, 영상, 견적, 문서까지 늘 최신 버전으로.</span></div>
+      <div class="hl"><i style="background:var(--forest)"></i><span class="t-body-m">누가 관심 있는지 한눈에</span><span class="t-label-r c-slate">이해관계자가 룸을 열거나 공유하면 바로 알려드려요.</span></div>
     </div>
   </div>
 </section>
@@ -509,23 +516,23 @@ img, svg { display: block; }
 <section class="section usecases">
   <div class="container">
     <div class="split-head">
-      <div class="left"><span class="t-overline">Use cases</span><h2 class="t-h-xl">Built around how<br>your team actually sells</h2></div>
-      <div class="right"><p class="t-body c-slate">From first call to renewal, every team works from the same room — so nothing gets lost between handoffs.</p><a class="t-body-m c-navy" href="#">Explore use cases →</a></div>
+      <div class="left"><span class="t-overline">활용 사례</span><h2 class="t-h-xl">우리 팀이 실제로<br>영업하는 방식 그대로</h2></div>
+      <div class="right"><p class="t-body c-slate">첫 미팅부터 재계약까지 모든 팀이 같은 룸에서 일해요. 인수인계 중에 놓치는 게 없어요.</p><a class="t-body-m c-navy" href="#">활용 사례 보기 →</a></div>
     </div>
     <div class="bento1">
       <div class="tile-big">
-        <div class="img img-warm"><svg width="28" height="28"><use href="#i-img"/></svg>Lifestyle / product photo 16:9</div>
-        <div class="overlay"><span class="badge badge-blue">Sales</span><span class="t-h-sm">Close with a mutual plan</span><span class="t-label-r c-slate">Pricing, security docs and next steps in one shared link buyers forward internally.</span></div>
+        <div class="img img-warm"><svg width="28" height="28"><use href="#i-img"/></svg>라이프스타일 / 제품 사진 16:9</div>
+        <div class="overlay"><span class="badge badge-blue">영업</span><span class="t-h-sm">공동 실행 계획으로 계약까지</span><span class="t-label-r c-slate">견적, 보안 문서, 다음 단계를 링크 하나에 담아 고객사 내부로 바로 전달돼요.</span></div>
       </div>
       <div class="card tile" style="height:460px">
-        <div class="img img-sky" style="height:250px"><svg width="28" height="28"><use href="#i-img"/></svg>Team photo</div>
-        <div class="body"><span class="badge badge-violet">Enablement</span><span class="t-h-sm">Ramp reps in half the time</span><span class="t-label-r c-slate">Playbooks and an AI agent that answers with approved sources.</span></div>
+        <div class="img img-sky" style="height:250px"><svg width="28" height="28"><use href="#i-img"/></svg>팀 사진</div>
+        <div class="body"><span class="badge badge-violet">영업 교육</span><span class="t-h-sm">신규 담당자 적응 기간을 절반으로</span><span class="t-label-r c-slate">플레이북과 승인된 자료로 답하는 AI 에이전트.</span></div>
       </div>
     </div>
     <div class="bento2">
-      <div class="card tile"><div class="img img-navy" style="height:200px"><svg width="28" height="28"><use href="#i-img"/></svg>Screenshot</div><div class="body"><span class="badge badge-green">Customer Success</span><span class="t-h-sm">Onboarding</span><span class="t-label-r c-slate">Kickoff to go-live without spreadsheets.</span></div></div>
-      <div class="card tile"><div class="img img-warm" style="height:200px"><svg width="28" height="28"><use href="#i-img"/></svg>Photo</div><div class="body"><span class="badge badge-blue">Account Mgmt</span><span class="t-h-sm">Renewals &amp; QBRs</span><span class="t-label-r c-slate">Show value with usage and outcomes in one place.</span></div></div>
-      <div class="card tile"><div class="img img-sky" style="height:200px"><svg width="28" height="28"><use href="#i-img"/></svg>Illustration</div><div class="body"><span class="badge badge-violet">Partnerships</span><span class="t-h-sm">Partner deals</span><span class="t-label-r c-slate">Co-sell rooms shared with resellers and SIs.</span></div></div>
+      <div class="card tile"><div class="img img-navy" style="height:200px"><svg width="28" height="28"><use href="#i-img"/></svg>스크린샷</div><div class="body"><span class="badge badge-green">고객 성공</span><span class="t-h-sm">온보딩</span><span class="t-label-r c-slate">킥오프부터 오픈까지 스프레드시트 없이.</span></div></div>
+      <div class="card tile"><div class="img img-warm" style="height:200px"><svg width="28" height="28"><use href="#i-img"/></svg>사진</div><div class="body"><span class="badge badge-blue">계정 관리</span><span class="t-h-sm">재계약 &amp; 분기 리뷰</span><span class="t-label-r c-slate">사용 현황과 성과를 한 곳에서 보여주세요.</span></div></div>
+      <div class="card tile"><div class="img img-sky" style="height:200px"><svg width="28" height="28"><use href="#i-img"/></svg>일러스트</div><div class="body"><span class="badge badge-violet">파트너십</span><span class="t-h-sm">파트너 딜</span><span class="t-label-r c-slate">리셀러·SI와 함께 쓰는 공동 영업 룸.</span></div></div>
     </div>
   </div>
 </section>
@@ -533,14 +540,14 @@ img, svg { display: block; }
 <!-- FEATURES -->
 <section class="section features">
   <div class="container">
-    <div class="sec-head"><span class="t-overline">Platform</span><h2 class="t-h-xl">Built for the whole customer journey</h2></div>
+    <div class="sec-head"><span class="t-overline">플랫폼</span><h2 class="t-h-xl">고객 여정 전체를 위한 플랫폼</h2></div>
     <div class="fgrid">
-      <article class="card fcard"><div class="img img-sky"><svg width="28" height="28"><use href="#i-img"/></svg>Image</div><span class="ficon"><svg width="20" height="20"><use href="#i-room"/></svg></span><h3 class="t-h-sm">Deal Rooms</h3><p class="t-body c-slate">One shared space for every buyer, with content, pricing and next steps in one link.</p><a class="link t-body-m c-navy" href="#">Learn more →</a></article>
-      <article class="card fcard"><div class="img img-navy"><svg width="28" height="28"><use href="#i-img"/></svg>Image</div><span class="ficon"><svg width="20" height="20"><use href="#i-room"/></svg></span><h3 class="t-h-sm">Mutual Action Plans</h3><p class="t-body c-slate">Align champions and stakeholders on dates, owners and success criteria.</p><a class="link t-body-m c-navy" href="#">Learn more →</a></article>
-      <article class="card fcard"><div class="img img-warm"><svg width="28" height="28"><use href="#i-img"/></svg>Image</div><span class="ficon"><svg width="20" height="20"><use href="#i-room"/></svg></span><h3 class="t-h-sm">AI Documents</h3><p class="t-body c-slate">Draft proposals, recaps and business cases from your call notes in seconds.</p><a class="link t-body-m c-navy" href="#">Learn more →</a></article>
-      <article class="card fcard"><div class="img img-navy"><svg width="28" height="28"><use href="#i-img"/></svg>Image</div><span class="ficon"><svg width="20" height="20"><use href="#i-room"/></svg></span><h3 class="t-h-sm">Enablement Agent</h3><p class="t-body c-slate">Answers rep questions instantly with sources from your approved content.</p><a class="link t-body-m c-navy" href="#">Learn more →</a></article>
-      <article class="card fcard"><div class="img img-warm"><svg width="28" height="28"><use href="#i-img"/></svg>Image</div><span class="ficon"><svg width="20" height="20"><use href="#i-room"/></svg></span><h3 class="t-h-sm">Customer Onboarding</h3><p class="t-body c-slate">Hand off from sales to CS without losing a single promise made in the deal.</p><a class="link t-body-m c-navy" href="#">Learn more →</a></article>
-      <article class="card fcard"><div class="img img-sky"><svg width="28" height="28"><use href="#i-img"/></svg>Image</div><span class="ficon"><svg width="20" height="20"><use href="#i-room"/></svg></span><h3 class="t-h-sm">Engagement Analytics</h3><p class="t-body c-slate">See who opened what, for how long, and which deals are going quiet.</p><a class="link t-body-m c-navy" href="#">Learn more →</a></article>
+      <article class="card fcard"><div class="img img-sky"><svg width="28" height="28"><use href="#i-img"/></svg>이미지</div><span class="ficon"><svg width="20" height="20"><use href="#i-room"/></svg></span><h3 class="t-h-sm">딜룸</h3><p class="t-body c-slate">고객마다 하나의 공유 공간. 콘텐츠, 견적, 다음 단계를 링크 하나로.</p><a class="link t-body-m c-navy" href="#">자세히 보기 →</a></article>
+      <article class="card fcard"><div class="img img-navy"><svg width="28" height="28"><use href="#i-img"/></svg>이미지</div><span class="ficon"><svg width="20" height="20"><use href="#i-room"/></svg></span><h3 class="t-h-sm">공동 실행 계획</h3><p class="t-body c-slate">내부 추진자·이해관계자와 일정, 담당자, 성공 기준을 맞추세요.</p><a class="link t-body-m c-navy" href="#">자세히 보기 →</a></article>
+      <article class="card fcard"><div class="img img-warm"><svg width="28" height="28"><use href="#i-img"/></svg>이미지</div><span class="ficon"><svg width="20" height="20"><use href="#i-room"/></svg></span><h3 class="t-h-sm">AI 문서</h3><p class="t-body c-slate">미팅 메모로 제안서, 요약, 비즈니스 케이스를 몇 초 만에 작성해요.</p><a class="link t-body-m c-navy" href="#">자세히 보기 →</a></article>
+      <article class="card fcard"><div class="img img-navy"><svg width="28" height="28"><use href="#i-img"/></svg>이미지</div><span class="ficon"><svg width="20" height="20"><use href="#i-room"/></svg></span><h3 class="t-h-sm">영업 교육 에이전트</h3><p class="t-body c-slate">승인된 자료를 근거로 영업 담당자의 질문에 바로 답해요.</p><a class="link t-body-m c-navy" href="#">자세히 보기 →</a></article>
+      <article class="card fcard"><div class="img img-warm"><svg width="28" height="28"><use href="#i-img"/></svg>이미지</div><span class="ficon"><svg width="20" height="20"><use href="#i-room"/></svg></span><h3 class="t-h-sm">고객 온보딩</h3><p class="t-body c-slate">영업에서 CS로 넘어갈 때, 계약 중 한 약속을 하나도 놓치지 않아요.</p><a class="link t-body-m c-navy" href="#">자세히 보기 →</a></article>
+      <article class="card fcard"><div class="img img-sky"><svg width="28" height="28"><use href="#i-img"/></svg>이미지</div><span class="ficon"><svg width="20" height="20"><use href="#i-room"/></svg></span><h3 class="t-h-sm">참여 분석</h3><p class="t-body c-slate">누가 무엇을 얼마나 봤는지, 어떤 딜이 조용해지는지 확인하세요.</p><a class="link t-body-m c-navy" href="#">자세히 보기 →</a></article>
     </div>
   </div>
 </section>
@@ -550,15 +557,15 @@ img, svg { display: block; }
   <div class="container">
     <div class="ipanel">
       <div class="copy">
-        <span class="t-overline">Integrations</span>
-        <h2 class="t-h-lg">Plays nicely with<br>your whole stack</h2>
-        <p class="t-body c-slate">Sync rooms, contacts and activity with the CRM, call recorder and e-signature tools your team already uses.</p>
+        <span class="t-overline">연동</span>
+        <h2 class="t-h-lg">지금 쓰는 툴과<br>자연스럽게 연결돼요</h2>
+        <p class="t-body c-slate">팀이 이미 쓰고 있는 CRM, 통화 녹음, 전자서명 툴과 룸·연락처·활동 기록을 동기화하세요.</p>
         <div>
-          <div class="check"><svg width="18" height="18"><use href="#i-done"/></svg>Two-way CRM sync for Salesforce and HubSpot</div>
-          <div class="check"><svg width="18" height="18"><use href="#i-done"/></svg>Auto-attach call recordings and notes</div>
-          <div class="check"><svg width="18" height="18"><use href="#i-done"/></svg>Native e-signature on order forms</div>
+          <div class="check"><svg width="18" height="18"><use href="#i-done"/></svg>Salesforce·HubSpot 양방향 CRM 동기화</div>
+          <div class="check"><svg width="18" height="18"><use href="#i-done"/></svg>통화 녹음과 메모 자동 첨부</div>
+          <div class="check"><svg width="18" height="18"><use href="#i-done"/></svg>주문서 전자서명 기본 지원</div>
         </div>
-        <a class="btn btn-ghost" href="#">See all integrations</a>
+        <a class="btn btn-ghost" href="#">전체 연동 보기</a>
       </div>
       <div class="tiles" id="tiles"></div>
     </div>
@@ -568,26 +575,26 @@ img, svg { display: block; }
 <!-- CUSTOMERS -->
 <section class="section customers">
   <div class="container">
-    <div class="sec-head"><span class="t-overline">Customers</span><h2 class="t-h-xl">Teams close faster with a single link</h2></div>
+    <div class="sec-head"><span class="t-overline">고객 사례</span><h2 class="t-h-xl">링크 하나로 더 빨리 계약하는 팀들</h2></div>
     <div class="testimonial">
-      <div class="img img-warm"><svg width="28" height="28"><use href="#i-img"/></svg>Customer portrait</div>
+      <div class="img img-warm"><svg width="28" height="28"><use href="#i-img"/></svg>고객 인물 사진</div>
       <div class="quote">
         <div class="clogo-lg"><i></i><b></b></div>
-        <blockquote>“We replaced a dozen follow-up emails with one link. Buyers forward the room to their CFO and legal team, and deals stopped going dark after the demo.”</blockquote>
+        <blockquote>“후속 메일 열몇 통을 링크 하나로 바꿨어요. 고객이 룸을 CFO와 법무팀에 직접 전달하니, 데모 이후 연락이 끊기는 딜이 사라졌습니다.”</blockquote>
         <div class="row between">
-          <div class="row" style="gap:12px"><i class="avatar" style="width:44px;height:44px"></i><div><div class="t-body-m">Morgan Lee</div><div class="t-label c-slate">VP Sales, Lattice</div></div></div>
+          <div class="row" style="gap:12px"><i class="avatar" style="width:44px;height:44px"></i><div><div class="t-body-m">이도윤</div><div class="t-label c-slate">Lattice 영업 총괄</div></div></div>
           <div class="slider">
             <div class="dots"><i class="on"></i><i></i><i></i></div>
-            <button class="arrow" aria-label="Previous"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M10 4L6 8l4 4" fill="none" stroke="#121722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-            <button class="arrow" aria-label="Next"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="#121722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="arrow" aria-label="이전"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M10 4L6 8l4 4" fill="none" stroke="#121722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="arrow" aria-label="다음"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l4 4-4 4" fill="none" stroke="#121722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
         </div>
       </div>
     </div>
     <div class="stats">
-      <div class="card stat"><div class="co"><i></i><span class="t-body-m">Lattice</span></div><span class="t-label c-slate">Deal Rooms</span><span class="t-h-xl c-navy metric">+25%</span><span class="t-body c-slate">increase in win rate</span></div>
-      <div class="card stat"><div class="co"><i></i><span class="t-body-m">BrightHire</span></div><span class="t-label c-slate">Mutual Action Plans</span><span class="t-h-xl c-violet metric">+22%</span><span class="t-body c-slate">faster sales cycles</span></div>
-      <div class="card stat"><div class="co"><i></i><span class="t-body-m">Loom</span></div><span class="t-label c-slate">Enablement Agent</span><span class="t-h-xl c-navy metric">2 hrs</span><span class="t-body c-slate">saved per rep, every week</span></div>
+      <div class="card stat"><div class="co"><i></i><span class="t-body-m">Lattice</span></div><span class="t-label c-slate">딜룸</span><span class="t-h-xl c-navy metric">+25%</span><span class="t-body c-slate">수주율 상승</span></div>
+      <div class="card stat"><div class="co"><i></i><span class="t-body-m">BrightHire</span></div><span class="t-label c-slate">공동 실행 계획</span><span class="t-h-xl c-violet metric">+22%</span><span class="t-body c-slate">영업 주기 단축</span></div>
+      <div class="card stat"><div class="co"><i></i><span class="t-body-m">Loom</span></div><span class="t-label c-slate">영업 교육 에이전트</span><span class="t-h-xl c-navy metric">2시간</span><span class="t-body c-slate">담당자 1인당 매주 절약</span></div>
     </div>
   </div>
 </section>
@@ -596,13 +603,13 @@ img, svg { display: block; }
 <section class="section resources">
   <div class="container">
     <div class="split-head">
-      <div class="left"><span class="t-overline">Resources</span><h2 class="t-h-lg">Playbooks from teams<br>that close faster</h2></div>
-      <a class="btn btn-ghost" href="#">View all posts</a>
+      <div class="left"><span class="t-overline">리소스</span><h2 class="t-h-lg">더 빨리 계약하는 팀들의<br>플레이북</h2></div>
+      <a class="btn btn-ghost" href="#">전체 글 보기</a>
     </div>
     <div class="agrid">
-      <article class="card article"><div class="img img-navy"><svg width="28" height="28"><use href="#i-img"/></svg>Image</div><div class="body"><span class="cat">Playbook</span><h3 class="t-h-sm">How top teams run mutual action plans</h3><p class="t-body c-slate">A field guide to aligning champions, legal and finance before the quarter ends.</p><div class="by"><i class="avatar"></i><span class="t-caption c-slate">Jamie Park · 6 min read</span></div></div></article>
-      <article class="card article"><div class="img img-sky"><svg width="28" height="28"><use href="#i-img"/></svg>Image</div><div class="body"><span class="cat">Customer story</span><h3 class="t-h-sm">How Loom saved reps two hours a week</h3><p class="t-body c-slate">Inside the enablement agent rollout that cut ramp time in half.</p><div class="by"><i class="avatar"></i><span class="t-caption c-slate">Priya Shah · 8 min read</span></div></div></article>
-      <article class="card article"><div class="img img-warm"><svg width="28" height="28"><use href="#i-img"/></svg>Image</div><div class="body"><span class="cat">Template</span><h3 class="t-h-sm">The business case template buyers forward</h3><p class="t-body c-slate">Copy the exact one-pager champions use to win budget internally.</p><div class="by"><i class="avatar"></i><span class="t-caption c-slate">Chris Moreno · 4 min read</span></div></div></article>
+      <article class="card article"><div class="img img-navy"><svg width="28" height="28"><use href="#i-img"/></svg>이미지</div><div class="body"><span class="cat">플레이북</span><h3 class="t-h-sm">상위 팀은 공동 실행 계획을 이렇게 운영해요</h3><p class="t-body c-slate">분기 마감 전 내부 추진자, 법무, 재무의 합의를 끌어내는 실전 가이드.</p><div class="by"><i class="avatar"></i><span class="t-caption c-slate">박지민 · 6분 읽기</span></div></div></article>
+      <article class="card article"><div class="img img-sky"><svg width="28" height="28"><use href="#i-img"/></svg>이미지</div><div class="body"><span class="cat">고객 사례</span><h3 class="t-h-sm">Loom은 어떻게 담당자의 주 2시간을 아꼈을까</h3><p class="t-body c-slate">신규 적응 기간을 절반으로 줄인 영업 교육 에이전트 도입기.</p><div class="by"><i class="avatar"></i><span class="t-caption c-slate">최수아 · 8분 읽기</span></div></div></article>
+      <article class="card article"><div class="img img-warm"><svg width="28" height="28"><use href="#i-img"/></svg>이미지</div><div class="body"><span class="cat">템플릿</span><h3 class="t-h-sm">고객이 내부에 공유하는 비즈니스 케이스 템플릿</h3><p class="t-body c-slate">내부 추진자가 예산을 따낼 때 쓰는 원페이저를 그대로 가져가세요.</p><div class="by"><i class="avatar"></i><span class="t-caption c-slate">정우진 · 4분 읽기</span></div></div></article>
     </div>
   </div>
 </section>
@@ -612,12 +619,12 @@ img, svg { display: block; }
   <div class="container">
     <div class="cta-panel">
       <span class="orb orb-1"></span><span class="orb orb-2"></span>
-      <div class="img img-sky peek peek-1"><svg width="28" height="28"><use href="#i-img"/></svg>Product shot</div>
-      <div class="img img-navy peek peek-2"><svg width="28" height="28"><use href="#i-img"/></svg>Product shot</div>
-      <h2 class="t-display">Want a deeper tour?</h2>
-      <p class="t-sub">See how your team could run every deal from a single link.</p>
-      <a class="btn btn-primary" href="#">Book a demo</a>
-      <div class="trust"><div class="avatars sm"><i class="avatar"></i><i class="avatar"></i><i class="avatar"></i><i class="avatar"></i></div><span class="t-label c-slate">Join 1,000+ revenue teams · No credit card required</span></div>
+      <div class="img img-sky peek peek-1"><svg width="28" height="28"><use href="#i-img"/></svg>제품 이미지</div>
+      <div class="img img-navy peek peek-2"><svg width="28" height="28"><use href="#i-img"/></svg>제품 이미지</div>
+      <h2 class="t-display">더 자세히 보고 싶으신가요?</h2>
+      <p class="t-sub">우리 팀의 모든 딜을 링크 하나로 운영하는 방법을 확인해 보세요.</p>
+      <a class="btn btn-primary" href="#">데모 예약하기</a>
+      <div class="trust"><div class="avatars sm"><i class="avatar"></i><i class="avatar"></i><i class="avatar"></i><i class="avatar"></i></div><span class="t-label c-slate">1,000곳 이상의 영업팀과 함께하세요 · 카드 등록 없이 시작</span></div>
     </div>
   </div>
 </section>
@@ -627,27 +634,27 @@ img, svg { display: block; }
 <footer class="footer">
   <div class="container">
     <div class="newsletter">
-      <div><div class="t-h-sm">Get the weekly revenue playbook</div><div class="t-label c-slate">Tactics from 1,000+ teams. One email a week, no spam.</div></div>
-      <form class="form" onsubmit="event.preventDefault()"><input class="input" type="email" placeholder="Work email" aria-label="Work email"><button class="btn btn-primary" type="submit">Subscribe</button></form>
+      <div><div class="t-h-sm">매주 받아보는 영업 플레이북</div><div class="t-label c-slate">1,000개 팀의 실전 노하우를 주 1회, 스팸 없이 보내드려요.</div></div>
+      <form class="form" onsubmit="event.preventDefault()"><input class="input" type="email" placeholder="회사 이메일" aria-label="회사 이메일"><button class="btn btn-primary" type="submit">구독하기</button></form>
     </div>
     <div class="links">
       <a href="#" class="logo" style="align-self:flex-start"><svg width="28" height="28"><use href="#i-logo"/></svg><span class="t-h-sm">Dock</span></a>
-      <div class="lcol"><h4>Product</h4><a href="#">Deal Rooms</a><a href="#">Mutual Action Plans</a><a href="#">AI Documents</a><a href="#">Integrations</a></div>
-      <div class="lcol"><h4>Sales</h4><a href="#">Proposals</a><a href="#">Business cases</a><a href="#">Follow-ups</a><a href="#">Order forms</a></div>
-      <div class="lcol"><h4>Enablement</h4><a href="#">Enablement Agent</a><a href="#">Content hub</a><a href="#">Playbooks</a><a href="#">Training</a></div>
-      <div class="lcol"><h4>Customer Success</h4><a href="#">Onboarding</a><a href="#">QBRs</a><a href="#">Renewals</a><a href="#">Expansion</a></div>
-      <div class="lcol"><h4>Resources</h4><a href="#">Blog</a><a href="#">Templates</a><a href="#">Guides</a><a href="#">Webinars</a></div>
-      <div class="lcol"><h4>General</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Security</a><a href="#">Contact</a></div>
+      <div class="lcol"><h4>제품</h4><a href="#">딜룸</a><a href="#">공동 실행 계획</a><a href="#">AI 문서</a><a href="#">연동</a></div>
+      <div class="lcol"><h4>영업</h4><a href="#">제안서</a><a href="#">비즈니스 케이스</a><a href="#">후속 연락</a><a href="#">주문서</a></div>
+      <div class="lcol"><h4>영업 교육</h4><a href="#">영업 교육 에이전트</a><a href="#">콘텐츠 허브</a><a href="#">플레이북</a><a href="#">교육</a></div>
+      <div class="lcol"><h4>고객 성공</h4><a href="#">온보딩</a><a href="#">분기 리뷰</a><a href="#">재계약</a><a href="#">확장</a></div>
+      <div class="lcol"><h4>리소스</h4><a href="#">블로그</a><a href="#">템플릿</a><a href="#">가이드</a><a href="#">웨비나</a></div>
+      <div class="lcol"><h4>회사</h4><a href="#">회사 소개</a><a href="#">채용</a><a href="#">보안</a><a href="#">문의</a></div>
     </div>
     <div class="legal">
-      <span>© 2026 Dock. All rights reserved.</span>
+      <span>© 2026 Dock. 모든 권리 보유.</span>
       <div class="socials">
         <a class="social" href="#" aria-label="X"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="#777c86" stroke-width="1.4" stroke-linecap="round"/></svg></a>
         <a class="social" href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M5 6.5v5M5 4.5v.01M8 11.5V8.5a1.5 1.5 0 013 0v3" fill="none" stroke="#777c86" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a class="social" href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 5.5h10v5H3z" fill="none" stroke="#777c86" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
         <a class="social" href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4.5" fill="none" stroke="#777c86" stroke-width="1.4"/></svg></a>
       </div>
-      <div class="legal-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a><a href="#">Status</a></div>
+      <div class="legal-links"><a href="#">개인정보처리방침</a><a href="#">이용약관</a><a href="#">쿠키 정책</a><a href="#">서비스 상태</a></div>
     </div>
   </div>
 </footer>
