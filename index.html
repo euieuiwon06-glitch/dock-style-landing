@@ -6,7 +6,7 @@
 <title>Dock — One link for every customer deal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500&family=Inter:wght@600&family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
 <style>
 :root {
   --cream: #faf9f7;
@@ -41,7 +41,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; }
 body {
-  font-family: 'Noto Sans KR', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Gothic A1', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   font-feature-settings: "kern" on;
   background: var(--cream);
   color: var(--ink);
@@ -57,6 +57,8 @@ img, svg { display: block; }
 
 /* ---------- Type ---------- */
 .t-display-lg { font-size: 84px; line-height: 1.10; font-weight: 700; letter-spacing: -2.5px; }
+/* bold text stays Noto Sans KR; body copy is Gothic A1 */
+.t-display-lg, .t-display, .t-h-xl, .t-h-lg, .t-h, .t-h-sm, .t-overline, .side-label, .tr.total, .quote blockquote, .article .cat, .lcol h4 { font-family: 'Noto Sans KR', ui-sans-serif, system-ui, sans-serif; }
 .t-en { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-weight: 600; font-feature-settings: "kern" on; }
 .t-display    { font-size: 57px; line-height: 1.12; font-weight: 700; letter-spacing: -1.5px; }
 .t-h-xl       { font-size: 48px; line-height: 1.24; font-weight: 700; letter-spacing: -1px; }
@@ -325,6 +327,7 @@ img, svg { display: block; }
   .t-h-lg { font-size: 30px; }
   .hero { padding: 88px 0 120px; }
   .hero .t-sub { margin-top: 28px; }
+  .br-d { display: none; }
   .shot-wrap { margin-top: 40px; }
   .shot { height: auto; }
   .side, .plan, .panel { display: none; }
@@ -392,7 +395,7 @@ img, svg { display: block; }
 <section class="hero">
   <div class="container">
     <h1 class="t-display-lg t-en">One link for<br>every customer deal</h1>
-    <p class="t-sub">딜룸, 영업 교육, 온보딩을 한 곳에서. 고객이 실제로 열어보는 워크스페이스에서 자료를 공유하고, 다음 단계를 맞추고, 더 빠르게 계약하세요.</p>
+    <p class="t-sub">딜룸, 영업 교육, 온보딩을 한 곳에서. 고객이 실제로 열어보는 워크스페이스에서<br class="br-d">자료를 공유하고, 다음 단계를 맞추고, 더 빠르게 계약하세요.</p>
     <div class="ctas"><a class="btn btn-ghost" href="#">데모 신청</a><a class="btn btn-primary" href="#">무료로 시작하기</a></div>
     <div class="proof">
       <div class="avatars"><i class="avatar s32"></i><i class="avatar s32"></i><i class="avatar s32"></i><i class="avatar s32"></i><i class="avatar s32"></i></div>
